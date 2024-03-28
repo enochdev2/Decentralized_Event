@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import address from '../contracts/contractAddress.json'
-import abi from '../artifacts/contracts/DappEventX.sol/DappEventX.json'
+import abi from '../artifact/contracts/DappEventX.sol/DappEventX.json'
 import { EventParams, EventStruct, TicketStruct } from '../utils/type.dt'
 import { globalActions } from '../store/globalSlices'
 import { store } from "../store"
