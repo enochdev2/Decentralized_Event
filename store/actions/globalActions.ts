@@ -1,4 +1,4 @@
-import { EventStruct, GlobalState, TicketStruct } from '../utils/type.dt'
+import { EventStruct, GlobalState, TicketStruct } from '../../utils/type.dt'
 import { PayloadAction } from '@reduxjs/toolkit'
 
 export const globalActions = {
