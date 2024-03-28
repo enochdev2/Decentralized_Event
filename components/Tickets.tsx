@@ -2,7 +2,7 @@ import { truncate } from '../utils/helper'
 import { TicketStruct } from '../utils/type.dt'
 import { BsDot } from 'react-icons/bs'
 import { FaEthereum } from 'react-icons/fa'
-import Identicon from 'react-identicons'
+// import Identicon from 'react-identicons'
 import Moment from 'react-moment'
 
 const Ticket: React.FC<{ tickets: TicketStruct[] }> = ({ tickets }) => {
@@ -19,11 +19,11 @@ const Ticket: React.FC<{ tickets: TicketStruct[] }> = ({ tickets }) => {
           key={i}
         >
           <div className="flex justify-start items-center space-x-2">
-            <Identicon
+            {/* <Identicon
               className="rounded-full overflow-hidden shadow-md"
               size={30}
               string={ticket.owner}
-            />
+            /> */}
             <p className="font-semibold">
               {truncate({
                 text: ticket.owner,
