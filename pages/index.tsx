@@ -6,7 +6,6 @@ import Hero from '../components/Hero'
 import { getEvents } from '../services/blockchain'
 import { EventStruct } from '../utils/type.dt'
 
-
 const Page: NextPage<{ eventsData: EventStruct[] }> = ({ eventsData }) => {
   const [end, setEnd] = useState<number>(6)
   const [count] = useState<number>(6)
@@ -31,6 +30,7 @@ const Page: NextPage<{ eventsData: EventStruct[] }> = ({ eventsData }) => {
       {collection.length > 0 && eventsData.length > collection.length && (
         <div className="w-full flex justify-center items-center">
           <button
+            type="button"
             className="bg-orange-500 shadow-md rounded-full py-3 px-4
         text-white duration-300 transition-all"
             onClick={() => setEnd(end + count)}

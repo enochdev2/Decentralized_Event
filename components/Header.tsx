@@ -7,9 +7,9 @@ import { FaTimes } from 'react-icons/fa'
 const Header: React.FC = () => {
   return (
     <header className="h-20 shadow-md p-5 sm:px-0 fixed z-50 top-0 right-0 left-0 bg-white">
-      <main className="lg:w-2/3 w-full mx-auto flex justify-between items-center flex-wrap">
-        <Link href={'/'} className="text-lg font-bold">
-          Dapp_Event
+      <main className="lg:w-11/12 w-11/12 mx-auto flex justify-between items-center flex-wrap">
+        <Link href={'/'} className="text-lg font-extrabold  text-orange-500 ">
+          Dapp-Event
         </Link>
         <Desktop />
         <Mobile />
@@ -42,7 +42,7 @@ const Mobile: React.FC = () => {
 
   return (
     <div className="sm:hidden">
-      <button title='button' onClick={() => setIsOpen(!isOpen)}>
+      <button title="button" onClick={() => setIsOpen(!isOpen)}>
         <CgMenuLeft size={25} />
       </button>
       {isOpen && (
@@ -51,7 +51,7 @@ const Mobile: React.FC = () => {
         shadow-md p-4 transition duration-500 ease-in-out transform-all"
         >
           <div className="flex justify-end">
-            <button title='button' onClick={() => setIsOpen(!isOpen)}>
+            <button title="button" onClick={() => setIsOpen(!isOpen)}>
               <FaTimes size={25} />
             </button>
           </div>

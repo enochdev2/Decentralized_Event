@@ -6,9 +6,9 @@ import { EventStruct } from '../utils/type.dt'
 
 const EventList: React.FC<{ events: EventStruct[] }> = ({ events }) => {
   return (
-    <section className="mt-10">
+    <section className="mt-2 border-t-2 border-t-orange-200">
       <main className="lg:w-2/3 w-full mx-auto">
-        <h4 className="text-2xl font-semibold my-8 text-center">Recent Events</h4>
+        <h4 className="text-2xl font-semibold my-8 text-center  text-orange-500 ">Recent Events</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-full justify-items-center">
           {events.map((event, i) => (
             <Card key={i} event={event} />
