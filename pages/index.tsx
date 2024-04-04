@@ -19,7 +19,7 @@ const Page: NextPage<{ eventsData: EventStruct[] }> = ({ eventsData }) => {
   return (
     <div>
       <Head>
-        <title>Decentralized+Event </title>
+        <title>Dapp_Event </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
