@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import ConnectBtn from './ConnectBtn'
 import React, { useState } from 'react'

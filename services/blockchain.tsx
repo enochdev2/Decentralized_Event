@@ -1,3 +1,5 @@
+"use client"
+
 import { ethers } from 'ethers'
 import address from '../contracts/contractAddress.json'
 import abi from '../artifact/contracts/DappEventX.sol/DappEventX.json'
@@ -154,7 +156,6 @@ const buyTicket = async (event: EventStruct, tickets: number): Promise<void> => 
 const getEvents = async (): Promise<EventStruct[]> => {
   const contract = await getEthereumContracts()
   const events = await contract.getEvents()
-  console.log("🚀 ~ getEvents ~ events:", events)
   return structuredEvent(events)
 }
 

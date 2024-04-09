@@ -18,3 +18,47 @@ a {
 * {
   box-sizing: border-box;
 }
+.footer {
+  padding: 200px 0;
+  text-align: center;
+  color: #c3c9d4;
+  position: relative;
+  overflow: hidden;
+}
+
+.containers {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+  .w-info .site-logo {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .sub-footer {
+    padding: 0;
+  }
+  .logo-design {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 40px;
+}
+
+ .widget {
+    text-align: center;
+    margin-bottom: 20px;
+  }

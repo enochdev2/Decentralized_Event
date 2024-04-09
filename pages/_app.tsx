@@ -1,3 +1,4 @@
+"use client"
 import '../styles/globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
 import type { AppProps } from 'next/app'
@@ -7,11 +8,12 @@ import { ToastContainer } from 'react-toastify'
 import { Providers } from '../services/provider'
 import { Provider } from 'react-redux'
 import { store } from '../store'
-
+import "../styles/globals.css"
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
 import { arbitrum, base, mainnet, optimism, polygon, sepolia, zora } from 'wagmi/chains'
 import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import Footer from '../components/Footer'
 
 
 // const client = new QueryClient()
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <div className="mt-10 h-20 "></div>
           <Component {...pageProps} />
           <div className="mt-10 h-20 "></div>
+          <Footer/>
 
           <ToastContainer
           position="bottom-center"

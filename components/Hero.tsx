@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
                 <Link
                   href={'/events/create'}
                   className="bg-[#010125] p-2 rounded-full py-3 px-4
-                text-white border hover:bg-transparent border hover:text-orange-500
+                text-white border hover:bg-transparent  hover:text-orange-500
                 hover:border-orange-500  duration-300 transition-all"
                 >
                   Add Events
