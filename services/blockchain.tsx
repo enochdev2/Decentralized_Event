@@ -1,5 +1,3 @@
-"use client"
-
 import { ethers } from 'ethers'
 import address from '../contracts/contractAddress.json'
 import abi from '../artifact/contracts/DappEventX.sol/DappEventX.json'

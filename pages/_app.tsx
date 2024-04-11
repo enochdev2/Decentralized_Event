@@ -1,22 +1,16 @@
 "use client"
-import '../styles/globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
 import type { AppProps } from 'next/app'
-import 'react-toastify/dist/ReactToastify.css'
-import Header from '../components/Header'
-import { ToastContainer } from 'react-toastify'
-import { Providers } from '../services/provider'
 import { Provider } from 'react-redux'
-import { store } from '../store'
-import "../styles/globals.css"
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { WagmiProvider } from 'wagmi'
-import { arbitrum, base, mainnet, optimism, polygon, sepolia, zora } from 'wagmi/chains'
-import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
+import { Providers } from '../services/provider'
+import { store } from '../store'
+import '../styles/globals.css'
 
 
-// const client = new QueryClient()
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

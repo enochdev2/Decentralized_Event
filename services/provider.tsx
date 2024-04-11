@@ -1,6 +1,6 @@
 'use client'
 
-import * as React from 'react'
+import { useEffect, useState } from 'react'
 
 import '@rainbow-me/rainbowkit/styles.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -31,10 +31,10 @@ const config = getDefaultConfig({
     },
   ],
   chains: [mainnet, polygon, optimism, arbitrum, base, sepolia, hardhat],
-  transports: {
-    [sepolia.id]: http('https://eth-sepolia.g.alchemy.com/v2/PnD17A_BCMUno1UXlU-Lfybx0AGiIQri'),
-  },
-})
+  // transports: {
+  //   [sepolia.id]: http('https://eth-sepolia.g.alchemy.com/v2/PnD17A_BCMUno1UXlU-Lfybx0AGiIQri'),
+  // },
+  })
 
 const queryClient = new QueryClient()
 
@@ -43,16 +43,24 @@ const demoAppInfo = {
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  // const [mounted, setMounted] = React.useState(false)
-  // React.useEffect(() => setMounted(true), [])
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+      setMounted(false)
+      console.log("TimeOut");
+      
+    }, 5000);
+  }, [])
+  
+ 
 
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider theme={darkTheme()}>
-          {/* {mounted && */}
-          {children}
-          {/* } */}
+          {mounted &&
+          children
+          }
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
