@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import { useAccount } from 'wagmi'
 import { createEvent } from '../../services/blockchain'
 import { EventParams } from '../../utils/type.dt'
+import Image from 'next/image'
 
 const Page: NextPage = () => {
   const { address } = useAccount()
@@ -79,7 +80,7 @@ const Page: NextPage = () => {
           {event.imageUrl && (
             <div className="flex flex-row justify-center items-center rounded-xl">
               <div className="shrink-0 rounded-xl overflow-hidden h-20 w-20 shadow-md">
-                <img src={event.imageUrl} alt={event.title} className="h-full object-cover" />
+                <Image src={event.imageUrl} alt={event.title} className="h-full object-cover" />
               </div>
             </div>
           )}

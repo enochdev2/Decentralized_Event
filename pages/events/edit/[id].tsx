@@ -3,6 +3,7 @@ import { timestampToDatetimeLocal } from '../../../utils/helper'
 import { EventParams, EventStruct } from '../../../utils/type.dt'
 import { GetServerSidePropsContext, NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { toast } from 'react-toastify'
@@ -64,7 +65,7 @@ const Page: NextPage<{ eventData: EventStruct }> = ({ eventData }) => {
           {event.imageUrl && (
             <div className="flex flex-row justify-center items-center rounded-xl">
               <div className="shrink-0 rounded-xl overflow-hidden h-20 w-20 shadow-md">
-                <img src={event.imageUrl} alt={event.title} className="h-full object-cover" />
+                <Image src={event.imageUrl} alt={event.title} className="h-full object-cover" />
               </div>
             </div>
           )}

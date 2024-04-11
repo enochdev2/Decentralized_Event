@@ -1,3 +1,4 @@
+
 import Head from 'next/head'
 import Link from 'next/link'
 import Moment from 'react-moment'
@@ -14,6 +15,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { globalActions } from '../../store/globalSlices'
 import EventActions from '../../components/EventAction'
+import Image from 'next/image'
 
 interface ComponentProps {
   eventData: EventStruct
@@ -45,7 +47,7 @@ const Page: NextPage<ComponentProps> = ({ eventData, ticketsData }) => {
           flex-col sm:space-x-3"
         >
           <div className="w-full shadow-md sm:shadow-sm">
-            <img src={event.imageUrl} alt={event.title} className="w-full h-[500px] object-cover" />
+            <Image src={event.imageUrl} alt={event.title}   className="w-full h-[500px] object-cover" />
           </div>
           <div className="w-full">
             <div className="flex flex-wrap justify-start items-center space-x-2 mt-4">

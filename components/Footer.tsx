@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   TiSocialFacebook,
   TiSocialInstagram,
@@ -50,9 +51,9 @@ const Footer = () => {
               <ul className=" socials social--white flex w-full justify-center space-x-5">
                 {social.map((social, index) => (
                   <li key={index} className="social-item">
-                    <a href={social.link} className="woox-icon">
+                    <Link href={social.link} className="woox-icon">
                       {social.icon}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -66,9 +67,9 @@ const Footer = () => {
             <div className="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-0 col-xs-12">
               <span>@ All right reserved 2024</span>
               <span>
-                <a href="/" className="text-[#ffba00]">
+                <Link href="/" className="text-[#ffba00]">
                   Enoch Tech
-                </a>{' '}
+                </Link>{' '}
                 - Decentralized Real_Estate
               </span>
 
@@ -76,12 +77,12 @@ const Footer = () => {
                 {/* <ing src="img/logo-fire.png" alt="" /> */}
                 <div className="design-wrap">
                   <div className="sub-title"> Design By</div>
-                  <a
+                  <Link
                     href="https://theblockchainc.com"
                     className="logo-title text-[#ffba00]"
                   >
                     @DeFi Prince
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -89,9 +90,9 @@ const Footer = () => {
                 {/* <ing src="img/crumina-logo.png" alt="" /> */}
                 <div className="design-wrap">
                   <div className=""> Design By</div>
-                  <a href="https://theblockchainco.com" className="logo-title">
+                  <Link href="https://theblockchainco.com" className="logo-title">
                     @The BlockChain
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
